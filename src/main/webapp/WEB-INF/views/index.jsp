@@ -44,9 +44,10 @@
 						<fieldset>
 							<legend>Sign-Up:</legend>
 
-							<input id="trackingNumber" type="email" value=""
+							<input id="trackingNumber" type="text" value=""
 								placeholder="Tracking number Here&hellip;">
-							<button id="searchParcel" class="fas fa-sign-in-alt" type="submit" title="Submit">
+							<button id="searchParcel" class="fas fa-sign-in-alt"
+								type="submit" title="Submit">
 								<em>Submit</em>
 							</button>
 						</fieldset>
@@ -58,13 +59,11 @@
 		<!-- ################################################################################################ -->
 	</div>
 	<!-- End Top Background Image Wrapper -->
-	<div class="wrapper row3" id="result">
-		<main class="hoc container clear"> <!-- main body --> <!-- ################################################################################################ -->
+	<div class="wrapper row3" id="result" style="display: none">
+		<main class="hoc clear"> <!-- main body --> <!-- ################################################################################################ -->
 		<section id="introblocks">
-			<div id="myParcelWhereisResult">
-			</div>
-			<div id="myParcelWhereis">
-			</div>
+			<div id="myParcelWhereisResult" style="display: none"></div>
+			<div id="myParcelWhereis" style="width: 100%"></div>
 		</section>
 		<!-- ################################################################################################ -->
 		<!-- / main body -->
@@ -99,17 +98,17 @@
 			</nav>
 			<ul class="nospace group ref-img">
 				<li class="one_third"><a class="imgover" href="#"><img
-						src="images/demo/348x261.png" alt=""></a></li>
+						src="${Path}/resources/images/cj.jpg" alt=""></a></li>
 				<li class="one_third"><a class="imgover" href="#"><img
-						src="images/demo/348x261.png" alt=""></a></li>
+						src="${Path}/resources/images/lotte.jpg" alt=""></a></li>
 				<li class="one_third"><a class="imgover" href="#"><img
-						src="images/demo/348x261.png" alt=""></a></li>
+						src="${Path}/resources/images/logen.gif" alt=""></a></li>
 				<li class="one_third"><a class="imgover" href="#"><img
-						src="images/demo/348x261.png" alt=""></a></li>
+						src="${Path}/resources/images/post.png" alt=""></a></li>
 				<li class="one_third"><a class="imgover" href="#"><img
-						src="images/demo/348x261.png" alt=""></a></li>
+						src="${Path}/resources/images/cu.png" alt=""></a></li>
 				<li class="one_third"><a class="imgover" href="#"><img
-						src="images/demo/348x261.png" alt=""></a></li>
+						src="${Path}/resources/images/hanjin.png" alt=""></a></li>
 			</ul>
 			<footer class="block center">
 				<a class="btn" href="#">View more here</a>
@@ -119,7 +118,6 @@
 	</div>
 	<div class="wrapper row4">
 		<footer id="footer" class="hoc clear">
-			<!-- ################################################################################################ -->
 			<div class="group btmspace-80">
 				<div class="one_third first">
 					<h6 class="heading">Non erat varius lacinia</h6>
@@ -158,25 +156,24 @@
 						</fieldset>
 					</form>
 				</div>
-				<div class="one_third">
+				<%-- 				<div class="one_third">
 					<h6 class="heading">Per inceptos himenaeos</h6>
 					<ul class="nospace clear latestimg">
 						<li><a class="imgover" href="#"><img
-								src="images/demo/100x100.png" alt=""></a></li>
+								src="${Path}/resources/images/cj.jpg" alt=""></a></li>
 						<li><a class="imgover" href="#"><img
-								src="images/demo/100x100.png" alt=""></a></li>
+								src="${Path}/resources/images/logen.gif" alt=""></a></li>
 						<li><a class="imgover" href="#"><img
-								src="images/demo/100x100.png" alt=""></a></li>
+								src="${Path}/resources/images/hanjin.png" alt=""></a></li>
 						<li><a class="imgover" href="#"><img
-								src="images/demo/100x100.png" alt=""></a></li>
+								src="${Path}/resources/images/post.png" alt=""></a></li>
 						<li><a class="imgover" href="#"><img
-								src="images/demo/100x100.png" alt=""></a></li>
+								src="${Path}/resources/images/lotte.jpg" alt=""></a></li>
 						<li><a class="imgover" href="#"><img
-								src="images/demo/100x100.png" alt=""></a></li>
+								src="${Path}/resources/images/cu.png" alt=""></a></li>
 					</ul>
-				</div>
+				</div> --%>
 			</div>
-			<!-- ################################################################################################ -->
 			<div id="ctdetails" class="clear">
 				<ul class="nospace clear">
 					<li class="one_quarter first">
@@ -205,24 +202,22 @@
 					</li>
 				</ul>
 			</div>
-			<!-- ################################################################################################ -->
 		</footer>
 	</div>
 	<div class="wrapper row5">
 		<div id="copyright" class="hoc clear">
 			<!-- ################################################################################################ -->
 			<p class="fl_left">
-				Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain
-					Name</a>
-			</p>
-			<p class="fl_right">
-				Template by <a target="_blank" href="https://www.os-templates.com/"
-					title="Free Website Templates">OS Templates</a>
+				Copyright &copy; 2019 - All Rights Reserved - <a href="#">WIMP</a>
 			</p>
 			<!-- ################################################################################################ -->
 		</div>
 	</div>
-
+	<!-- loading -->
+	<div id="loading">
+		<img id="loading-image" src="${Path}/resources/images/loading.gif"
+			alt="Loading..." />
+	</div>
 	<!--위로가기 버튼 -->
 	<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 	<%@ include file="include/jsInclude.jsp"%>

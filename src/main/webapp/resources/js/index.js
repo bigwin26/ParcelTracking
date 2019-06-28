@@ -1,4 +1,4 @@
-	//택배사 목록 가져오기 RESTful API 방식
+	//택배사 목록 가져오기
 	$(document).ready(
 			function() {
 				// 택배사 목록 조회 company-api
@@ -26,11 +26,13 @@
 				});
 			});
 	
-	
+	//택배 진행상황 가져오기
 	$("#searchParcel").click(function(event) {
 		event.preventDefault();
 		var carrier_id = $('#tekbeCompnayList option:selected').val();
 		var track_id = $('#trackingNumber').val();
+		$('#result').css('display','block');
+		$('#loading').css('display','block'); //loading화면 보여주기
 		$.ajax({
 			type : "GET",
 			dataType : "json",
@@ -83,6 +85,7 @@
 				});
 	
 				$("#myParcelWhereis").html(header+myTracking);
+				$('#loading').css('display','none'); //조회가 끝난 후 loading화면 감추기
 			}
 		});
 	});
