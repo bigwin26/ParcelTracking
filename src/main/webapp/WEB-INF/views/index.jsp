@@ -65,7 +65,6 @@
 			<div id="myParcelWhereisResult" style="display: none"></div>
 			<div id="myParcelWhereis" style="width: 100%"></div>
 		</section>
-		<!-- ################################################################################################ -->
 		<!-- / main body -->
 		<div class="clear"></div>
 		</main>
