@@ -44,7 +44,7 @@
 				var state = parseData.state;
 				var myInvoiceData = "";
 				if(data.status == false){
-					myInvoiceData += ('<p>'+parseData.msg+'<p>');
+					myInvoiceData += ('<p>'+parseData.message+'<p>');
 				}else{
 					myInvoiceData += ('<tr>');                
 					myInvoiceData += ('<th>'+"보내는사람"+'</td>');                     
@@ -59,6 +59,7 @@
 					myInvoiceData += ('<th>'+state.text+'</td>');                     
 					myInvoiceData += ('</tr>');                                       
 				}
+				
 	
 	
 				$("#myParcelWhereisResult").html(myInvoiceData)
@@ -86,7 +87,11 @@
 	
 				$("#myParcelWhereis").html(header+myTracking);
 				$('#loading').css('display','none'); //조회가 끝난 후 loading화면 감추기
-			}
+			},
+			error:function(request,status,error){
+		        alert("message:"+request.responseText);
+		        $('#loading').css('display','none'); //조회가 끝난 후 loading화면 감추기
+		       }
 		});
 	});
 	
